@@ -12,7 +12,7 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
+git clone https://github.com/gSpotx2f/luci-app-log.git ./package/luci-app-log
 # Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+echo 'src-git-full luci_app_xray https://github.com/yichya/luci-app-xray' >>feeds.conf.default
+
