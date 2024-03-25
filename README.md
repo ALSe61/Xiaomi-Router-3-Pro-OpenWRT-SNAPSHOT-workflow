@@ -6,7 +6,7 @@ A template for building OpenWrt SNAPSHOT for Xiaomi Router 3 Pro with GitHub Act
 
 ## Features
 
-- - "Telephony" feed
-- + [luci-app-xray](https://github.com/yichya/luci-app-xray) feed (see diy-part1.sh)
-- + [luci-app-log-viewer](https://github.com/gSpotx2f/luci-app-log.git) package (see diy-part1.sh)
-- + luci, samba4, luci-app-xray, luci-app-log, dnsmasq-full, luci-app-statistics, nano-full, wget-ssl, tcpdump-mini, e2fsprog and other (see .config)
+- "Telephony" feed
++ [luci-app-xray](https://github.com/yichya/luci-app-xray) feed (see diy-part1.sh)
++ [luci-app-log-viewer](https://github.com/gSpotx2f/luci-app-log.git) package (see diy-part1.sh)
++ luci, samba4, luci-app-xray, luci-app-log, dnsmasq-full, luci-app-statistics, nano-full, wget-ssl, tcpdump-mini, e2fsprog and other (see .config)
