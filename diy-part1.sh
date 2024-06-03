@@ -15,7 +15,7 @@ sed -i '/ telephony /s/^/#/' ./feeds.conf.default
 # luci-app-log
 git clone https://github.com/gSpotx2f/luci-app-log.git ./package/luci-app-log
 # telegram-openwrt
-git clone https://github.com/alexwbaule/telegramopenwrt.git ./package/telegram-openwrt
+#git clone https://github.com/alexwbaule/telegramopenwrt.git ./package/telegram-openwrt
 # luci-app-xray
 echo 'src-git-full luci_app_xray https://github.com/yichya/luci-app-xray' >>feeds.conf.default
 
