@@ -24,6 +24,7 @@ env:
   DEFAULTS: defaults
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
+  BREED_FIRMWARE: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -104,7 +105,16 @@ jobs:
     - name: Check space usage
       if: (!cancelled())
       run: df -hT
-
+      
+    - name: Make bin for flash in Breed bootloader
+      if: env.BREED_FIRMWARE == 'true' && !cancelled()
+      run: |
+        cd openwrt/bin/targets/*/*
+        FW=$(find . -name '*-factory.bin' -print -quit)
+        if [[ ! -z "$FW" ]]; then
+         dd if="$FW" bs=4M count=1 status=none | cat - "$FW" > "${FW%.*}_breed-pbboot.${FW##*.}"
+        fi
+    
     - name: Upload bin directory
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
